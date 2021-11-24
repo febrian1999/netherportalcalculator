@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="febrian.netherportalcalculator">
    <application
-        android:label="netherportalcalculator"
+        android:label="Nether Portal Calculator"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
