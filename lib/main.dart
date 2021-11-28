@@ -36,39 +36,43 @@ class _MyHomePageState extends State<MyHomePage> {
   TextEditingController controllerNetherY = TextEditingController();
   TextEditingController controllerNetherZ = TextEditingController();
 
-  late String resultX;
-  late String resultY;
-  late String resultZ;
+  late String resultX, resultY, resultZ;
+  late double overX, overY, overZ, netherX, netherY, netherZ;
 
-  formOnChanged(text) {
-    double overX, overY, overZ, netherX, netherY, netherZ;
-    if (controllerOverworldX.text.toString() == "") {
-      overX = 0;
-    } else {
-      overX = double.parse(controllerOverworldX.text.toString());
+  overworldOnChanged(text) {
+    overX = double.parse(controllerOverworldX.text.toString());
+    overY = double.parse(controllerOverworldY.text.toString());
+    overZ = double.parse(controllerOverworldZ.text.toString());
+
+    if (controllerOverworldX.text.toString() != "") {
+      controllerNetherX.text = NumberFormat("#").format(overX / 8);
     }
 
-    if (controllerOverworldY.text.toString() == "") {
-      overY = 0;
-    } else {
-      overY = double.parse(controllerOverworldY.text.toString());
+    if (controllerOverworldY.text.toString() != "") {
+      controllerNetherY.text = NumberFormat("#").format(overY);
     }
 
-    if (controllerOverworldZ.text.toString() == "") {
-      overZ = 0;
-    } else {
-      overZ = double.parse(controllerOverworldZ.text.toString());
+    if (controllerOverworldZ.text.toString() != "") {
+      controllerNetherZ.text = NumberFormat("#").format(overZ / 8);
+    }
+  }
+
+  netherOnChanged(text) {
+    netherX = double.parse(controllerNetherX.text.toString());
+    netherY = double.parse(controllerNetherY.text.toString());
+    netherZ = double.parse(controllerNetherZ.text.toString());
+
+    if (controllerNetherX.text.toString() != "") {
+      controllerOverworldX.text = NumberFormat("#").format(netherX * 8);
     }
 
-    if (controllerNetherX.text.toString() == "") {
-      netherX = 0;
-    } else {
-      netherX = double.parse(controllerOverworldZ.text.toString());
+    if (controllerNetherY.text.toString() != "") {
+      controllerOverworldY.text = NumberFormat("#").format(netherY);
     }
 
-    controllerNetherX.text = NumberFormat("######", "en_US").format(overX / 8);
-    controllerNetherY.text = NumberFormat("######", "en_US").format(overY);
-    controllerNetherZ.text = NumberFormat("######", "en_US").format(overZ / 8);
+    if (controllerNetherZ.text.toString() != "") {
+      controllerOverworldZ.text = NumberFormat("#").format(netherZ * 8);
+    }
   }
 
   @override
@@ -146,7 +150,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                           controller: controllerOverworldX,
                                           textAlign: TextAlign.center,
                                           decoration: InputDecoration(
-                                            hintText: "0",
                                             enabledBorder: UnderlineInputBorder(
                                               borderSide: BorderSide(
                                                 color: Colors.blue,
@@ -164,7 +167,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                           ),
                                           keyboardType: TextInputType.number,
                                           onChanged: (text) {
-                                            formOnChanged(text);
+                                            overworldOnChanged(text);
                                           },
                                         ),
                                       ),
@@ -199,7 +202,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                           ),
                                           keyboardType: TextInputType.number,
                                           onChanged: (text) {
-                                            formOnChanged(text);
+                                            overworldOnChanged(text);
                                           },
                                         ),
                                       ),
@@ -216,7 +219,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                           controller: controllerOverworldZ,
                                           textAlign: TextAlign.center,
                                           decoration: InputDecoration(
-                                            hintText: "0",
                                             enabledBorder: UnderlineInputBorder(
                                               borderSide: BorderSide(
                                                 color: Colors.blue,
@@ -234,7 +236,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                           ),
                                           keyboardType: TextInputType.number,
                                           onChanged: (text) {
-                                            formOnChanged(text);
+                                            overworldOnChanged(text);
                                           },
                                         ),
                                       ),
@@ -274,7 +276,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                           controller: controllerNetherX,
                                           textAlign: TextAlign.center,
                                           decoration: InputDecoration(
-                                            hintText: "0",
                                             enabledBorder: UnderlineInputBorder(
                                               borderSide: BorderSide(
                                                 color: Colors.red,
@@ -292,7 +293,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                           ),
                                           keyboardType: TextInputType.number,
                                           onChanged: (text) {
-                                            formOnChanged(text);
+                                            netherOnChanged(text);
                                           },
                                         ),
                                       ),
@@ -327,7 +328,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                           ),
                                           keyboardType: TextInputType.number,
                                           onChanged: (text) {
-                                            formOnChanged(text);
+                                            netherOnChanged(text);
                                           },
                                         ),
                                       ),
@@ -362,7 +363,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                           ),
                                           keyboardType: TextInputType.number,
                                           onChanged: (text) {
-                                            formOnChanged(text);
+                                            netherOnChanged(text);
                                           },
                                         ),
                                       ),
