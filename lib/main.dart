@@ -162,8 +162,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                                 width: 2,
                                               ),
                                             ),
-                                            // filled: true,
-                                            // fillColor: Color(0x80f2f2f2),
                                           ),
                                           keyboardType: TextInputType.number,
                                           onChanged: (text) {
@@ -197,8 +195,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                                 width: 2,
                                               ),
                                             ),
-                                            // filled: true,
-                                            // fillColor: Color(0x80f2f2f2),
                                           ),
                                           keyboardType: TextInputType.number,
                                           onChanged: (text) {
@@ -231,8 +227,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                                 width: 2,
                                               ),
                                             ),
-                                            // filled: true,
-                                            // fillColor: Color(0x80f2f2f2),
                                           ),
                                           keyboardType: TextInputType.number,
                                           onChanged: (text) {
@@ -288,8 +282,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                                 width: 2,
                                               ),
                                             ),
-                                            // filled: true,
-                                            // fillColor: Color(0x80f2f2f2),
                                           ),
                                           keyboardType: TextInputType.number,
                                           onChanged: (text) {
@@ -323,8 +315,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                                 width: 2,
                                               ),
                                             ),
-                                            // filled: true,
-                                            // fillColor: Color(0x80f2f2f2),
                                           ),
                                           keyboardType: TextInputType.number,
                                           onChanged: (text) {
@@ -358,8 +348,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                                 width: 2,
                                               ),
                                             ),
-                                            // filled: true,
-                                            // fillColor: Color(0x80f2f2f2),
                                           ),
                                           keyboardType: TextInputType.number,
                                           onChanged: (text) {
