@@ -128,7 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: Column(
                           children: [
                             Container(
-                              padding: EdgeInsets.fromLTRB(4, 16, 4, 4),
+                              padding: EdgeInsets.fromLTRB(4, 16, 4, 8),
                               child: Text(
                                 "Overworld",
                                 style: TextStyle(
@@ -141,7 +141,41 @@ class _MyHomePageState extends State<MyHomePage> {
                             Row(
                               children: [
                                 Container(
-                                  padding: EdgeInsets.fromLTRB(4, 8, 4, 8),
+                                  padding: EdgeInsets.fromLTRB(4, 8, 8, 0),
+                                  width: ((screenWidth - 32) / 3),
+                                  child: Text(
+                                    "X",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                                Container(
+                                  padding: EdgeInsets.fromLTRB(4, 8, 8, 0),
+                                  width: ((screenWidth - 32) / 3),
+                                  child: Text(
+                                    "Y",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                                Container(
+                                  padding: EdgeInsets.fromLTRB(4, 8, 8, 0),
+                                  width: ((screenWidth - 32) / 3),
+                                  child: Text(
+                                    "Z",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Container(
+                                  padding: EdgeInsets.fromLTRB(4, 0, 4, 8),
                                   width: ((screenWidth - 32) / 3),
                                   child: Column(
                                     children: [
@@ -173,7 +207,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   ),
                                 ),
                                 Container(
-                                  padding: EdgeInsets.fromLTRB(4, 8, 4, 8),
+                                  padding: EdgeInsets.fromLTRB(4, 0, 4, 8),
                                   width: (screenWidth - 32) / 3,
                                   child: Column(
                                     children: [
@@ -206,7 +240,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   ),
                                 ),
                                 Container(
-                                  padding: EdgeInsets.fromLTRB(4, 8, 4, 8),
+                                  padding: EdgeInsets.fromLTRB(4, 0, 4, 8),
                                   width: (screenWidth - 32) / 3,
                                   child: Column(
                                     children: [
