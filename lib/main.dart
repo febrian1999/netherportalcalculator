@@ -435,7 +435,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
               ),
-              SliverFillRemaining(),
+              SliverFillRemaining(
+                hasScrollBody: false,
+                child: Container(
+                  child: Text(
+                    "Nether Portal Caltulator",
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ),
             ],
           ),
         ),
